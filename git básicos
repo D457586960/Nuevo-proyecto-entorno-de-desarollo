@@ -1,7 +1,40 @@
-Git es un sistema de control de versiones distribuido y de código abierto que registra los cambios en tus archivos y permite coordinar el trabajo en equipo. Cada copia local incluye el historial completo del proyecto, lo que te deja trabajar sin conexión y volver a versiones anteriores cuando lo necesites.
+# Conceptos Básicos de Git
 
-• Repositorio: Carpeta del proyecto donde Git guarda el historial de cambios. Puede ser local (en tu equipo) o remoto (en plataformas como GitHub o GitLab).
-• Instantáneas (snapshots): En lugar de guardar solo diferencias, Git guarda una foto del estado de tus archivos en cada confirmación.
-• Ramas (branches): Líneas de desarrollo independientes para probar funciones o corregir errores sin afectar la rama principal.
-• Fusión (merge): Unión de los cambios de una rama con otra.
+**Git** es un sistema de control de versiones distribuido, gratuito y de código abierto diseñado para gestionar y registrar el historial de cambios de cualquier proyecto de software, desde pequeños scripts hasta aplicaciones de gran escala.
+
+A diferencia de otros sistemas más antiguos, Git es **distribuido**: esto significa que cada desarrollador tiene en su ordenador una copia completa del proyecto junto con todo su historial de versiones. Gracias a esta arquitectura, puedes trabajar sin conexión a internet, crear puntos de guardado rápidos y volver a estados anteriores de forma segura si algo sale mal.
+
+
+
+## Conceptos Fundamentales
+
+* **Repositorio (Repo):** Es el espacio o carpeta donde se almacena tu proyecto junto con la carpeta oculta `.git`, que contiene todo el historial de cambios y configuraciones. Puede ser **local** (en tu propio ordenador) o **remoto** (alojado en la nube en plataformas como GitHub, GitLab o Bitbucket para colaborar con otros).
+* **Instantáneas (*Snapshots*):** En lugar de guardar únicamente las diferencias línea por línea entre archivos, Git toma una "fotografía" completa del estado de todos los archivos del proyecto cada vez que guardas una versión. Si un archivo no ha cambiado, simplemente enlaza con la versión anterior para ahorrar espacio.
+* **Commit (Confirmación):** Es el punto de guardado oficial en el historial de Git. Cada *commit* tiene un identificador único (hash), guarda una instantánea del proyecto y va acompañado de un mensaje descriptivo que explica qué cambios se han realizado.
+* **Ramas (*Branches*):** Son líneas de desarrollo independientes que parten de un punto del proyecto. Permiten desarrollar nuevas funcionalidades, hacer experimentos o corregir errores sin poner en riesgo el código estable de la rama principal (`main`).
+* **Fusión (*Merge*):** Es el proceso mediante el cual se integran los cambios realizados en una rama dentro de otra (por ejemplo, unir una rama de nueva funcionalidad a la rama `main` una vez revisada).
+
+
+
+## Los Tres Estados de Git
+
+Para entender cómo trabaja Git por dentro, es clave conocer las tres áreas por las que pasan los archivos:
+
+1. **Directorio de trabajo (*Working Directory*):** Es la carpeta visible de tu proyecto donde creas, modificas o eliminas archivos en tu día a día.
+2. **Área de preparación (*Staging Area* o *Index*):** Es una zona intermedia donde seleccionas y preparas exactamente qué cambios quieres incluir en tu próximo guardado.
+3. **Repositorio local (`.git`):** Es donde Git almacena de forma permanente las instantáneas confirmadas mediante un *commit*.
+
+
+
+## Comandos Esenciales del Día a Día
+
+| Comando | Descripción |
+| :--- | :--- |
+| `git init` | Inicializa un nuevo repositorio local de Git en la carpeta actual. |
+| `git clone <url>` | Descarga una copia completa de un repositorio remoto a tu ordenador. |
+| `git status` | Muestra el estado actual de los archivos (modificados, preparados o sin seguimiento). |
+| `git add <archivo>` | Añade los cambios al área de preparación (*Staging Area*). Usa `git add .` para añadir todo. |
+| `git commit -m "mensaje"` | Guarda los cambios preparados en el historial con un mensaje descriptivo. |
+| `git push` | Sube tus *commits* locales al repositorio remoto (por ejemplo, a GitHub). |
+| `git pull` | Descarga y fusiona los últimos cambios del repositorio remoto en tu copia local. |
 
