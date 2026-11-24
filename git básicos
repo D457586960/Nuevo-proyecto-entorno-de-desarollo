@@ -1,0 +1,7 @@
+Git es un sistema de control de versiones distribuido y de código abierto que registra los cambios en tus archivos y permite coordinar el trabajo en equipo. Cada copia local incluye el historial completo del proyecto, lo que te deja trabajar sin conexión y volver a versiones anteriores cuando lo necesites.
+
+• Repositorio: Carpeta del proyecto donde Git guarda el historial de cambios. Puede ser local (en tu equipo) o remoto (en plataformas como GitHub o GitLab).
+• Instantáneas (snapshots): En lugar de guardar solo diferencias, Git guarda una foto del estado de tus archivos en cada confirmación.
+• Ramas (branches): Líneas de desarrollo independientes para probar funciones o corregir errores sin afectar la rama principal.
+• Fusión (merge): Unión de los cambios de una rama con otra.
+
