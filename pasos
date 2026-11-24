@@ -1,0 +1,8 @@
+Una Pull Request (PR) sirve para proponer que los cambios realizados en una rama se incorporen a la rama principal (main).
+Crear una rama: crea una nueva rama desde main para trabajar sin modificar el proyecto principal
+Realizar los cambios: edita o crea los archivos necesarios en tu rama.
+Hacer un commit: guarda los cambios realizados con un mensaje que explique qué has modificado.
+Crear la Pull Request: entra en la pestaña Pull requests, pulsa New pull request y selecciona main como rama principal y tu rama como rama de comparación.
+Añadir una descripción: escribe un título y explica brevemente los cambios realizados. También puedes vincular la tarea escribiendo Closes #número.
+Revisar y aprobar: otro compañero debe revisar los cambios y aprobar la Pull Request.
+Hacer el Merge: una vez aprobada, pulsa Merge pull request para incorporar los cambios a main.
